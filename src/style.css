@@ -8,6 +8,11 @@
     src: url(hindilike.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'menufont';
+    src: url(trench100.ttf) format('truetype');
+}
+
 html {
     height: 100%;
 }
@@ -17,6 +22,7 @@ body {
     background-image: url(../src/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .header {
@@ -82,3 +88,49 @@ body {
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.menucontainer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 500px;
+    margin: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 60px 100px;
+    font-family:  'menufont', Helvetica, sans-serif;
+    background-image: linear-gradient(rgb(165, 39, 39),rgb(199, 107, 31) );
+}
+.menuheading {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'hindilike';
+}
+.menusubheading {
+    font-size: 30px;
+    font-weight: bold;
+}
+.item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.price {
+    text-align: right;
+}
+
+.menucontainer img {
+    width: 100px;
+    border-radius: 50%;
+}
+

@@ -1,4 +1,5 @@
 import './style.css'
+import {displayMenu, removeMenu} from './menu.js';
 
 function Displayhomepage() {
     const header = document.createElement('div');
@@ -26,6 +27,7 @@ function Displayhomepage() {
 
     tabs.classList.add('tabs');
     menu.classList.add('menu');
+    menu.setAttribute('id', 'menu');
     home.classList.add('home');
     about.classList.add('about');
 
@@ -42,3 +44,14 @@ function Displayhomepage() {
 }
 
 Displayhomepage();
+
+const menubuttons = document.querySelectorAll('.menu');
+
+menubuttons.forEach(btn => {
+    btn.addEventListener('click',displayMenu);
+});
+
+const home = document.querySelector('.home');
+
+home.addEventListener('click', removeMenu);
+
